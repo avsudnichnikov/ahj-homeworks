@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat</title>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered is-gapless">
+        <div id="chat" class="column is-two-thirds-desktop columns chat">
+          <div class="tile is-ancestor">
+            <div class="tile is-4 is-parent">
+              <article id="users-tile" class="tile is-child notification">
+                <p class="subtitle">Users</p>
+                <div class="icon-text">
+                  <span class="icon has-text-info">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  </span>
+                  <span>Valera</span>
+                </div>
+                <div class="icon-text">
+                  <span class="icon">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  </span>
+                  <span>Valera</span>
+                </div>
+              </article>
+            </div>
+            <div class="tile is-vertical is-parent">
+              <article id="messages-tile" class="tile is-child notification">
+              </article>
+              <article id="input-tile" class="tile is-child notification">
+                <div class="form">
+                  <textarea id="send-inp" class="textarea" placeholder="Message"></textarea>
+                  <button id="send-btn" class="button is-primary">Send</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="modal" id="join">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Join as</p>
+    </header>
+    <section class="modal-card-body">
+      <div class="field">
+        <label class="label">Username
+          <input id="join-inp" class="input" type="text" placeholder="For example, Vladimir" value="">
+        </label>
+        <p class="help is-danger" id="join-help"></p>
+      </div>
+    </section>
+    <footer class="modal-card-foot is-justify-content-end">
+      <button id="join-btn" class="button is-primary">Join</button>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

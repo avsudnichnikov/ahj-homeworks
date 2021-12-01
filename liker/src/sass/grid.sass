@@ -1,0 +1,28 @@
+html, body
+  margin: 0
+.container
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  width: 100%
+  min-width: 120px
+  max-width: 1200px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  &.hero
+    min-height: 100vh
+.row
+  display: flex
+  justify-content: flex-start
+  align-items: flex-start
+  flex: 1 1 auto
+  position: relative
+  padding-left: 1rem
+  padding-right: 1rem
+.col
+  position: relative
+  width: 100%
+  flex-wrap: wrap
+  & + &
+    margin-left: 1rem

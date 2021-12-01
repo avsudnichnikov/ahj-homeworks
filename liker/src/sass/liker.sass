@@ -1,0 +1,98 @@
+.liker
+  --like-amplitude: 50px
+  --heart-size: 20px
+  --heart-color: #ff0062
+  position: relative
+  .heart
+    position: absolute
+    animation-duration: .5s
+    animation-iteration-count: 1
+    animation-timing-function: linear
+    transform: translate(-50%, -100%) rotate(-135deg)
+    display: inline-block
+    height:  var(--heart-size)
+    width: var(--heart-size)
+    margin: 0 calc(var(--heart-size) / 5)
+    background-color: var(--heart-color)
+    &:before, &:after
+      content: ""
+      position: absolute
+      height: var(--heart-size)
+      width: var(--heart-size)
+      background-color: var(--heart-color)
+      border-radius: 50%
+    &:before
+      top: calc(var(--heart-size) / 2)
+      left: 0
+    &:after
+      left: calc(var(--heart-size) / 2)
+      top: 0
+
+
+    &.like1
+      animation-name: like, like1
+
+    &.like2
+      animation-name: like, like2
+
+    &.like3
+      animation-name: like, like3
+
+    &.like4
+      animation-name: like, like4
+
+    @keyframes like
+      0%
+        bottom: 0
+        opacity: 1
+      100%
+        bottom: 200px
+        opacity: 0
+
+    @keyframes like1
+      0%
+        left: calc(var(--like-amplitude) / 2)
+      25%
+        left: 0
+      50%
+        left: calc(var(--like-amplitude) / 2)
+      75%
+        left: var(--like-amplitude)
+      100%
+        left: 0
+
+    @keyframes like2
+      0%
+        left: calc(var(--like-amplitude) / 2)
+      25%
+        left: calc(var(--like-amplitude) / 2)
+      50%
+        left: var(--like-amplitude)
+      75%
+        left: 0
+      100%
+        left: calc(var(--like-amplitude) / 2)
+
+    @keyframes like3
+      0%
+        left: calc(var(--like-amplitude) / 2)
+      25%
+        left: calc(var(--like-amplitude) / 2)
+      50%
+        left: 0
+      75%
+        left: var(--like-amplitude)
+      100%
+        left: calc(var(--like-amplitude) / 2)
+
+    @keyframes like4
+      0%
+        left: calc(var(--like-amplitude) / 2)
+      25%
+        left: var(--like-amplitude)
+      50%
+        left: calc(var(--like-amplitude) / 2)
+      75%
+        left: 0
+      100%
+        left: 0

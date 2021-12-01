@@ -1,0 +1,42 @@
+.bg-primary
+  background: #107ABB
+
+.mt-1
+  margin-top: 1rem
+.mb-1
+  margin-bottom: 1rem
+
+.collapse
+  transition: height .5s
+  &:not(.show)
+    transition: height .5s
+    display: none
+.hidden
+  visibility: hidden
+
+.icon
+  font-size: xx-large
+  height: 36px
+  width: 36px
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  transition: color .5s
+  &:hover
+    color: #107ABB
+.link
+  font-weight: bold
+  display: inline-block
+  width: content-box
+  padding: .25rem
+  text-transform: uppercase
+  transition-property: background, color
+  transition-duration: .5s
+  background-color: white
+  &.error
+    cursor: pointer
+    color: #ee4848
+    &:hover
+      color: #be2424
+      background-color: #ffd5dc

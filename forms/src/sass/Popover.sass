@@ -1,0 +1,41 @@
+.popover
+  --v-popover-bg-color: #f7f7f7
+  --v-popover-he-color: #efefef
+  --v-popover-br-color: #cccccc
+  position: absolute
+  min-width: 260px
+  border-radius: .375rem
+  border: 1px solid var(--v-popover-br-color)
+  background: var(--v-popover-bg-color)
+  transform: translate(-50%, -100%)
+  visibility: hidden
+  .arrow
+    position: absolute
+    left: 50%
+    bottom: 0
+    width: 1rem
+    height: 0.5rem
+    transform: translate(-50%, calc(100% - 1px))
+    &::after, &::before
+      content: ''
+      border-color: transparent
+      border-width: 0.5rem 0.5rem 0
+      position: absolute
+      display: block
+      border-style: solid
+    &::after
+      bottom: 0
+      border-top-color: var(--v-popover-bg-color)
+    &::before
+      bottom: -1px
+      border-top-color: var(--v-popover-br-color)
+  &__title, &__text
+    padding: 0.5rem 1rem
+  &__title
+    background-color: var(--v-popover-he-color)
+    border-bottom: 1px solid var(--v-popover-br-color)
+    font-weight: 700
+    border-top-left-radius: calc(.375rem - 1px)
+    border-top-right-radius: calc(.375rem - 1px)
+  &.visible
+    visibility: visible
